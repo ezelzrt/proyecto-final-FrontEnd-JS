@@ -1,0 +1,255 @@
+/* Define variables globales */
+:root {
+  --main-color: #fff7ec;
+  --opposite-color: #9ec4f8;
+  --color2: #ecfff7;
+  --color3: #f7ecff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--opposite-color);
+    color: var(--main-color);
+    font-family: "Roboto", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+}
+
+h2{
+    border-bottom: 3px solid var(--color3);
+    width: 50vw;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+header{
+    background-color: var(--main-color);
+    color: var(--opposite-color);
+    padding: 5px;
+    text-align: center;
+}
+
+header img{
+    width: 200px;
+    height: 200px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li a{
+    color: var(--opposite-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main{
+    text-align: center;
+}
+
+section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.init-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--opposite-color);
+    width: min(80vw, 100%);
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.init-container p{
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.init-img-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--main-color);
+    padding: 10px;
+}
+
+.init-container img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1px;
+}
+
+.products-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product{
+    background-color: var(--main-color);
+    color: var(--opposite-color);
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.product img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product p{
+    font-weight: 450;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid var(--color3);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px;
+    background-color: var(--color3);
+    color: var(--opposite-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ig{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ig i{
+    font-size: 30px;
+    color: var(--opposite-color);
+    background-color: var(--color3);
+    padding: 10px;
+    border-radius: 100%;
+}
+
+footer{
+    background-color: var(--main-color);
+    color: var(--opposite-color);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul{
+    list-style: circle;
+    text-align: left;
+}
+
+footer ul p{
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+footer ul li{
+    margin-left: 20px;
+}
+
+footer ul li a{
+    color: var(--opposite-color);
+    font-weight: bold;
+}
+
+@media (max-width: 600px){
+    nav ul{
+        flex-direction: column;
+        gap:10px;
+    }
+
+    .init-container img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .products-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ig i{
+        font-size: 25px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width:1024px){
+    .products-container{
+        justify-content: center;
+    }
+
+    .init-container p {
+        font-weight: 350;
+    }
+}
+
+@media (min-width: 1025px){
+    .products-container{
+        justify-content: space-evenly;
+    }
+
+    .ig i{
+        font-size: 40px;
+    }
+}

@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 	let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-	const productRender = async () => {
+	const product_render = async () => {
 		try {
 			let response = await fetch('https://dummyjson.com/products/category-list');
 			let categories = await response.json();
 	
 			let random_category = categories[Math.floor(Math.random() * categories.length)];
-			let url = `https://dummyjson.com/products/category/${random_category}?limit=8`;
+			let url = `https://dummyjson.com/products/category/${random_category}?sortBy=price&order=asc&limit=8`;
 
-			let productResponse = await fetch(url);
-			let data = await productResponse.json();
+			let product_response = await fetch(url);
+			let data = await product_response.json();
 			
 			let products_container = document.getElementById("products-container");
 			for (const product of data.products) {
@@ -22,15 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
 				product_img.alt = product.description;
 
 				let product_name = document.createElement("p");
-				product_name.classList.add("product-name");
 				product_name.textContent = product.title;
 
 				let product_price = document.createElement("p");
-				// product_price.classList.add("product-price");
 				product_price.textContent = `$${product.price}`;
 
 				let add_to_cart_button = document.createElement("button");
-				// add_to_cart_button.classList.add("add-to-cart");
 				add_to_cart_button.textContent = "Agregar al carrito";
 
 				add_to_cart_button.addEventListener("click", () => {
@@ -57,9 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const update_cart_count = () => {
 		let cart_count = document.getElementById("cart-count");
-		cart_count.textContent = cart.length;
+		cart_count.textContent = cart.length ? cart.length : '';
 	}
 
-	productRender();
+	product_render();
 	update_cart_count();
 });

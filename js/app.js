@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			let categories = await response.json();
 	
 			let random_category = categories[Math.floor(Math.random() * categories.length)];
-			let url = `https://dummyjson.com/products/category/${random_category}?sortBy=price&order=asc&limit=8`;
+			let url = `https://dummyjson.com/products/category/${random_category}?sortBy=price&order=asc&limit=9`;
 
 			let product_response = await fetch(url);
 			let data = await product_response.json();

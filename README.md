@@ -2,7 +2,7 @@
 El siguiente repositorio es la entrega final realizada para el curso de Front-End JS realizado a traves de Talento Tech, la cual consiste es la realización de una página aplicando los conceptos de `HTML`, `CSS` y `JavaScript` vistos durante el curso
 
 ## Hosting
-El proyecto se encuentra subido en GitHub Pages, el cual se puede visualizar en el siguiente enlace: https://ezelzrt.github.io/proyecto-final-FrontEndJS/
+El proyecto se encuentra subido en GitHub Pages, el cual se puede visualizar en el siguiente enlace: https://ezelzrt.github.io/proyecto-final-FrontEnd-JS/
 
 ## Requisitos
 Algunos requisitos de esta entrega final eran:
